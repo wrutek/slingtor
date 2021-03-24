@@ -1,0 +1,20 @@
+{
+    "name": "SlingTor",
+    "version": "0.1",
+    "description": "Extend Sling app capabilities",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": ["contextMenus", "https://app.getsling.com/*"],
+    "content_scripts" : [
+        {
+            "matches" : [ "https://app.getsling.com/*" ],
+            "js": ["getSelection.js"]
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    },
+    "manifest_version": 2
+}
